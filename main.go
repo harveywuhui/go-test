@@ -10,7 +10,7 @@ import (
 )
 
 //导入我们在protos文件中定义的服务
-import pb "github.com/grpc-server/rpc"
+import pb "github.com/go-test/hello"
 
 //定义一个结构体，作用是实现helloworld中的GreeterServer
 type server struct {
