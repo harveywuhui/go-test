@@ -4,15 +4,15 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"google.golang.org/grpc"
 	"log"
 	"net"
-	"google.golang.org/grpc"
 )
 
 //导入我们在protos文件中定义的服务
-import pb "github.com/grpc-server/hello"
+import pb "github.com/harveywuhui/go-test/hello"
 
-//定义一个结构体，作用是实现helloworld中的GreeterServer
+// 定义一个结构体，作用是实现helloworld中的GreeterServer
 type server struct {
 	pb.UnimplementedGreeterServer
 }
@@ -22,7 +22,7 @@ func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloRe
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
 }
 
-//定义端口号 支持启动的时候输入端口号
+// 定义端口号 支持启动的时候输入端口号
 var (
 	port = flag.Int("port", 50051, "The server port")
 )
