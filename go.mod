@@ -1,4 +1,4 @@
-module github.com
+module github.com/grpc-server
 
 go 1.20
 

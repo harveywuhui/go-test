@@ -10,7 +10,7 @@ import (
 )
 
 //导入我们在protos文件中定义的服务
-import pb "github.com/go-test/hello"
+import pb "github.com/grpc-server/hello"
 
 //定义一个结构体，作用是实现helloworld中的GreeterServer
 type server struct {
@@ -36,7 +36,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	//实例化gRPC服务
-	s := gRPC.NewServer()
+	s := grpc.NewServer()
 	//服务注册
 	pb.RegisterGreeterServer(s, &server{})
 	log.Printf("server listening at %v", lis.Addr())
