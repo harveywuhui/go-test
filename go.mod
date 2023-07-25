@@ -1,4 +1,4 @@
-module github.com/go-test
+module github.com/harveywuhui/go-test
 
 go 1.20
 
