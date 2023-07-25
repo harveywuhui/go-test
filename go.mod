@@ -1,4 +1,4 @@
-module github.com/grpc-server
+module github.com/go-test
 
 go 1.20
 
